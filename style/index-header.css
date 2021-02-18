@@ -1,0 +1,563 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: '고도 M';
+  font-size: 16px;
+  box-sizing: border-box;
+  list-style: none;
+  color: #333;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  z-index: 999;
+  background-color: #fff;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 3.975rem;
+}
+
+header .mobile_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 89%;
+  height: 100%;
+}
+
+header .mobile_header .pc_header-menu {
+  display: none;
+}
+
+header .hamburger_menu {
+  position: relative;
+  width: 1.25rem;
+  height: 1rem;
+}
+
+header .hamburger_menu .line {
+  transition: top 0.3s, transform 0.3s;
+  position: absolute;
+  width: 1.25rem;
+  height: 1px;
+  background-color: #000;
+}
+
+header .hamburger_menu #top {
+  top: 0rem;
+}
+
+header .hamburger_menu #middle {
+  top: 0.5rem;
+}
+
+header .hamburger_menu #bottom {
+  top: 1rem;
+}
+
+.bodywrap {
+  margin: 0 auto;
+  margin-top: 3.975rem;
+  width: 89%;
+}
+
+.bodywrap .contents {
+  width: 100%;
+}
+
+.bodywrap .contents .contents-header {
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.bodywrap .contents .contents-profile_image {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 5.125rem;
+  margin: 20px 0;
+}
+
+.bodywrap .contents .contents-profile_image img {
+  border-radius: 50px;
+  width: 5.125rem;
+}
+
+.bodywrap .contents h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.bodywrap .contents h1 {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.625rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+.bodywrap .contents .contents-info {
+  margin-top: 2.9375rem;
+  text-align: center;
+  font-size: 0.625rem;
+}
+
+.bodywrap .contents .contents-info p {
+  line-height: 1.25rem;
+  font-size: 0.625rem;
+  font-family: "나눔바른고딕";
+  margin-bottom: 1rem;
+  color: #3B3B3B;
+}
+
+.bodywrap .contact_button {
+  text-align: center;
+  margin: 5.125rem 0;
+}
+
+.bodywrap .contact_button button {
+  color: #000;
+  padding: 1rem 3.75rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #000;
+  transition: all 0.3s;
+}
+
+.bodywrap .contact_button button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.5);
+}
+
+.modal .modal_layer {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  margin: -9.187rem 0 0 -39%;
+  width: 78%;
+  height: 18.375rem;
+  background-color: #fff;
+}
+
+.modal .modal_layer .modal_layer-header {
+  font-size: 1rem;
+  padding: 1.25rem;
+  margin: 0 auto;
+}
+
+.modal .modal_layer .modal_layer-table {
+  display: grid;
+  grid-template-columns: 40% 80%;
+  text-align: left;
+  width: 78.125%;
+  margin: 0 auto;
+}
+
+.modal .modal_layer .modal_layer-table li {
+  padding: 10px 0;
+}
+
+.modal .modal_layer .modal_layer-table li:nth-child(2n-1) {
+  font-size: 0.875rem;
+}
+
+.modal .modal_layer .modal_layer-table li:nth-child(2n) {
+  font-family: "나눔바른고딕";
+  font-size: 0.875rem;
+  width: 60%;
+}
+
+.modal .modal_layer .close_btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.modal .modal_layer .close_btn .line {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.modal .modal_layer .close_btn #top {
+  transform: rotate(45deg);
+}
+
+.modal .modal_layer .close_btn #bottom {
+  transform: rotate(-45deg);
+}
+
+.hamburger_menu-submenu {
+  display: none;
+  position: fixed;
+  top: 3.975rem;
+  left: 0;
+  background-color: rgba(40, 40, 40, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.hamburger_menu-submenu .submenu {
+  transition: all 0.5s;
+  position: absolute;
+  left: 100%;
+  width: 50%;
+  background-color: #fff;
+  height: 100%;
+}
+
+.hamburger_menu-submenu .submenu ul {
+  margin-top: 15px;
+}
+
+.hamburger_menu-submenu .submenu ul li a {
+  padding: 15px 40px;
+  font-size: 1.25rem;
+}
+
+@media all and (min-width: 768px) {
+  header {
+    height: 5rem;
+  }
+  header .mobile_header .logo {
+    font-size: 1.5rem;
+  }
+  header .mobile_header .hamburger_menu {
+    width: 1.875rem;
+    height: 1.5rem;
+  }
+  header .mobile_header .hamburger_menu .line {
+    width: 100%;
+  }
+  header .mobile_header .hamburger_menu #top {
+    top: 0rem;
+  }
+  header .mobile_header .hamburger_menu #middle {
+    top: 0.75rem;
+  }
+  header .mobile_header .hamburger_menu #bottom {
+    top: 1.5rem;
+  }
+  .bodywrap {
+    margin-top: 5rem;
+    width: 89%;
+  }
+  .bodywrap .contents .contents-header {
+    font-size: 1.875rem;
+    height: 4rem;
+    line-height: 4rem;
+  }
+  .bodywrap .contents .contents-profile_image {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 6.25rem;
+    margin: 30px 0;
+  }
+  .bodywrap .contents .contents-profile_image img {
+    border-radius: 50px;
+    width: 6.25rem;
+  }
+  .bodywrap .contents h2 {
+    font-size: 1.875rem;
+  }
+  .bodywrap .contents h1 {
+    margin-top: 1.875rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  .bodywrap .contents .contents-info {
+    margin-top: 5.1875rem;
+    font-size: 1.25rem;
+  }
+  .bodywrap .contents .contents-info p {
+    line-height: 1.875rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .bodywrap .contact_button {
+    margin: 5.1875rem 0;
+  }
+  .bodywrap .contact_button button {
+    padding: 1.5rem 5rem;
+    font-size: 1.875rem;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 40, 40, 0.5);
+  }
+  .modal .modal_layer {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin: -9.187rem 0 0 -39%;
+    width: 78%;
+    height: 18.375rem;
+    background-color: #fff;
+  }
+  .modal .modal_layer .modal_layer-header {
+    font-size: 1rem;
+    padding: 1.25rem;
+    margin: 0 auto;
+  }
+  .modal .modal_layer .modal_layer-table {
+    display: grid;
+    grid-template-columns: 40% 80%;
+    text-align: left;
+    width: 78.125%;
+    margin: 0 auto;
+  }
+  .modal .modal_layer .modal_layer-table li {
+    padding: 10px 0;
+  }
+  .modal .modal_layer .modal_layer-table li:nth-child(2n-1) {
+    font-size: 0.875rem;
+  }
+  .modal .modal_layer .modal_layer-table li:nth-child(2n) {
+    font-family: "나눔바른고딕";
+    font-size: 0.875rem;
+    width: 60%;
+  }
+  .modal .modal_layer .close_btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+  .modal .modal_layer .close_btn .line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+  }
+  .modal .modal_layer .close_btn #top {
+    transform: rotate(45deg);
+  }
+  .modal .modal_layer .close_btn #bottom {
+    transform: rotate(-45deg);
+  }
+  .hamburger_menu-submenu {
+    display: none;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    background-color: rgba(40, 40, 40, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .hamburger_menu-submenu .submenu {
+    transition: all 0.5s;
+    position: absolute;
+    left: 100%;
+    width: 50%;
+    background-color: #fff;
+    height: 100%;
+  }
+  .hamburger_menu-submenu .submenu ul {
+    margin-top: 15px;
+  }
+  .hamburger_menu-submenu .submenu ul li a {
+    padding: 15px 40px;
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  header {
+    height: 6.25rem;
+  }
+  header .mobile_header .pc_header-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header .mobile_header .pc_header-menu li {
+    margin: 0 1.25rem;
+  }
+  header .mobile_header .pc_header-menu li:last-child {
+    margin-right: 0;
+  }
+  header .mobile_header .logo {
+    font-size: 1.8755rem;
+  }
+  header .mobile_header .hamburger_menu {
+    display: none;
+  }
+  .bodywrap {
+    margin-top: 6.25rem;
+    width: 89%;
+  }
+  .bodywrap .contents .contents-header {
+    font-size: 2rem;
+    height: 5.625rem;
+    line-height: 5.625rem;
+  }
+  .bodywrap .contents .contents-profile_image {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 9.375rem;
+    margin: 4.375rem 0;
+  }
+  .bodywrap .contents .contents-profile_image img {
+    border-radius: 50%;
+    width: 9.375rem;
+  }
+  .bodywrap .contents h2 {
+    font-size: 2.25rem;
+  }
+  .bodywrap .contents h1 {
+    margin-top: 3.125rem;
+    font-size: 1.875rem;
+    line-height: 3.125rem;
+  }
+  .bodywrap .contents .contents-info {
+    display: none;
+  }
+  .bodywrap .contents .pc_contents-info {
+    text-align: center;
+    margin-top: 4.375rem;
+    font-size: 1.625rem;
+    font-weight: 300;
+  }
+  .bodywrap .contents .pc_contents-info p {
+    font-weight: 300;
+    font-family: "나눔바른고딕";
+    line-height: 3.125rem;
+    font-size: 1.625rem;
+    margin-bottom: 1.25rem;
+  }
+  .bodywrap .contact_button {
+    margin: 5.1875rem 0;
+  }
+  .bodywrap .contact_button button {
+    padding: 1.5rem 5rem;
+    font-size: 1.875rem;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 40, 40, 0.5);
+  }
+  .modal .modal_layer {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin: -9.187rem 0 0 -39%;
+    width: 78%;
+    height: 18.375rem;
+    background-color: #fff;
+  }
+  .modal .modal_layer .modal_layer-header {
+    font-size: 1rem;
+    padding: 1.25rem;
+    margin: 0 auto;
+  }
+  .modal .modal_layer .modal_layer-table {
+    display: grid;
+    grid-template-columns: 40% 80%;
+    text-align: left;
+    width: 78.125%;
+    margin: 0 auto;
+  }
+  .modal .modal_layer .modal_layer-table li {
+    padding: 10px 0;
+  }
+  .modal .modal_layer .modal_layer-table li:nth-child(2n-1) {
+    font-size: 0.875rem;
+  }
+  .modal .modal_layer .modal_layer-table li:nth-child(2n) {
+    font-family: "나눔바른고딕";
+    font-size: 0.875rem;
+    width: 60%;
+  }
+  .modal .modal_layer .close_btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+  .modal .modal_layer .close_btn .line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+  }
+  .modal .modal_layer .close_btn #top {
+    transform: rotate(45deg);
+  }
+  .modal .modal_layer .close_btn #bottom {
+    transform: rotate(-45deg);
+  }
+  .hamburger_menu-submenu {
+    display: none;
+    position: fixed;
+    top: 6.25rem;
+    left: 0;
+    background-color: rgba(40, 40, 40, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .hamburger_menu-submenu .submenu {
+    transition: all 0.5s;
+    position: absolute;
+    left: 100%;
+    width: 50%;
+    background-color: #fff;
+    height: 100%;
+  }
+  .hamburger_menu-submenu .submenu ul {
+    margin-top: 15px;
+  }
+  .hamburger_menu-submenu .submenu ul li a {
+    padding: 15px 40px;
+    font-size: 1.25rem;
+  }
+}
