@@ -1,0 +1,189 @@
+@import url("../style/reset.css");
+.scroll_value {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.home_button {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  z-index: 999;
+}
+
+.home_button .fas {
+  mix-blend-mode: difference;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.home_button:hover .fas {
+  color: #fff;
+}
+
+.main_section {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFF7F0;
+}
+
+.main_section .subject-container {
+  border-bottom: 1px solid #000;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  width: 90%;
+  height: 80%;
+}
+
+.main_section .subject-container h1 {
+  font-family: "Tahoma";
+  font-size: 6.25rem;
+}
+
+.main_section .subject-container span {
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  bottom: 4%;
+}
+
+.intro_section {
+  position: relative;
+  width: 100%;
+}
+
+.intro_section img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.intro_section .contents-wrapper {
+  position: absolute;
+  bottom: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 85%;
+}
+
+.intro_section .contents-wrapper h3 {
+  opacity: 0;
+  margin: 2% 0 4% 5%;
+  width: 95%;
+  top: 0;
+  font-size: 2.5rem;
+  position: relative;
+  transition: opacity 1s ease;
+}
+
+.intro_section .contents-wrapper .info-wrapper {
+  opacity: 0;
+  transition: opacity 1s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro_section .contents-wrapper .info-wrapper .profile_info {
+  margin-left: 5%;
+  margin-right: 2.5%;
+  display: block;
+  width: 40%;
+}
+
+.intro_section .contents-wrapper .info-wrapper .profile_info h1 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  word-break: keep-all;
+  line-height: 2rem;
+}
+
+.intro_section .contents-wrapper .info-wrapper .profile_info h1 span {
+  margin: 1rem 0;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: width 2s ease;
+}
+
+.intro_section .contents-wrapper .info-wrapper .profile_info p {
+  font-size: 1rem;
+  line-height: 3rem;
+  word-break: keep-all;
+}
+
+.intro_section .contents-wrapper .info-wrapper .skills_info {
+  margin-left: 2.5%;
+  margin-right: 5%;
+  display: block;
+  width: 40%;
+}
+
+.intro_section .contents-wrapper .info-wrapper .skills_info h2 {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.intro_section .contents-wrapper .info-wrapper .skills_info h2 span {
+  margin: 1rem 0;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: width 2s ease;
+}
+
+.intro_section .contents-wrapper .info-wrapper .skills_info li {
+  margin-bottom: 2rem;
+}
+
+.intro_section .contents-wrapper .info-wrapper .skills_info li h1 {
+  margin-bottom: 0.7rem;
+}
+
+.intro_section .contents-wrapper .info-wrapper .skills_info li p {
+  text-indent: 0.5rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.intro_section .contents-wrapper .info-wrapper .skills_info .comment {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.contact_section .contents-wrapper {
+  opacity: 0;
+  position: relative;
+  top: 10vh;
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  transition: opacity 1s ease;
+}
+
+.contact_section .contents-wrapper h1 {
+  padding: 3rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.contact_section .contents-wrapper .contact-container {
+  text-align: center;
+}
+
+.contact_section .contents-wrapper .contact-container .mail-section {
+  margin-top: 2rem;
+  font-size: 3.5rem;
+}
+
+.contact_section .contents-wrapper .contact-container span {
+  display: inline-block;
+  margin-top: 1rem;
+}
