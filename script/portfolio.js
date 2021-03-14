@@ -68,8 +68,12 @@ $(document).ready(()=>{
         })
     }
 
-    $('.img-container > img').mouseover(()=>{cursorOver();})
-    $('.img-container > img').mouseout(()=>{cursorOut();})
+    $('.main-section').mouseover(()=>{cursorOver();})
+    $('.main-section').mouseout(()=>{cursorOut();})
+    $('.top-section').mouseover(()=>{cursorOver();})
+    $('.top-section').mouseout(()=>{cursorOut();})
+    $('.img-container').mouseover(()=>{cursorOver();})
+    $('.img-container').mouseout(()=>{cursorOut();})
     $('.swiper-button-prev').mouseover(()=>{cursorOver();})
     $('.swiper-button-prev').mouseout(()=>{cursorOut();})
     $('.swiper-button-next').mouseover(()=>{cursorOver();})
@@ -78,6 +82,8 @@ $(document).ready(()=>{
     $('.scroll_section > li > a').mouseout(()=>{cursorOut();})
     $('.home_button').mouseover(()=>{cursorOver();})
     $('.home_button').mouseout(()=>{cursorOut();})
+
+    
     
     $('.subject-container').css({
         marginTop: -$('.subject-container').height()/2,
@@ -97,12 +103,20 @@ $(document).ready(()=>{
     })
 
     window.addEventListener('mousewheel',()=>{
+
+        if($('.section').eq(0).hasClass('active')){
+            $('.home_button').css({"opacity":0});
+
+        }
+        
         if($('.section').eq(1).hasClass('active')){
+            $('.home_button').css({"opacity":1});
             section1Active();
         }
 
         if($('.section').eq(2).hasClass('active')){
             section2Active();
+            $('.home_button').css({"opacity":1});
         }
 
         if($('.section').eq(3).hasClass('active')){

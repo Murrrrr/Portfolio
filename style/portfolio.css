@@ -10,6 +10,7 @@
   bottom: 5%;
   right: 3%;
   z-index: 999;
+  transition: opacity 0.5s ease;
 }
 
 .home_button .fas {
@@ -19,6 +20,7 @@
 }
 
 .home_button:hover .fas {
+  cursor: none;
   color: #fff;
 }
 

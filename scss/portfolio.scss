@@ -11,6 +11,8 @@
     bottom: 5%;
     right: 3%;
     z-index:999;
+    transition: opacity 0.5s ease;;
+    
 
     .fas{
         mix-blend-mode: difference;
@@ -19,6 +21,7 @@
     }
 
     &:hover .fas{
+        cursor:none;
         color: #fff;
         
     }

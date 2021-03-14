@@ -281,10 +281,79 @@ body {
   margin: 0 auto;
 }
 
+.work_section #work_slide-container .swiper-slide .img-container:hover .hover-section {
+  opacity: 1;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container a {
+  cursor: none;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container a:hover {
+  mix-blend-mode: difference;
+}
+
 .work_section #work_slide-container .swiper-slide .img-container img {
+  top: 50%;
+  position: relative;
   display: inline-block;
   width: 100%;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container .hover-section {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  width: 100%;
   height: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container .hover-section .main-section {
+  position: relative;
+  background-image: url("../image/blessedbullet.PNG");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  background-size: 200%;
+  transition: background-size 0.5s ease;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container .hover-section .main-section span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container .hover-section .main-section:hover {
+  background-size: 250%;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container .hover-section .top-section {
+  position: relative;
+  background-image: url("../image/blessedbulletTop.PNG");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+  background-size: 150%;
+  transition: background-size 0.5s ease;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container .hover-section .top-section span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.work_section #work_slide-container .swiper-slide .img-container .hover-section .top-section:hover {
+  background-size: 200%;
 }
 
 .work_section #work_slide-container .swiper-slide h1 {
